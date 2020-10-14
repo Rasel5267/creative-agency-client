@@ -8,7 +8,8 @@ import { useState } from 'react';
 import Sidebar from '../../Sidebar/Sidebar';
 
 const Orders = () => {
-    const [loggedInUser, setLoggedInUser,] = useContext(UserContext);
+    const [loggedInUser] = useContext(UserContext);
+    console.log(loggedInUser);
     const [userValue, setUserValue] = useState({
         title: '',
         projectDtl: '',

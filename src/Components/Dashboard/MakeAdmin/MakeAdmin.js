@@ -24,7 +24,7 @@ const MakeAdmin = () => {
       }
 
     const handleAdmin = (e) => {
-        const newAdminEmail = {...setNewAdmin};
+        const newAdminEmail = {...newAdmin};
         newAdminEmail[e.target.name] = e.target.value;
         setNewAdmin(newAdminEmail);
     }

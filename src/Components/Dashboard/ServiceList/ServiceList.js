@@ -39,7 +39,7 @@ const ServiceList = () => {
                                     <Card className="card">
                                         <Row>
                                             <Col className="ml-3 mt-3">
-                                                <img src={service1} alt="service" style={{width: '50px'}} />
+                                                <img className="animation" src={service1} alt="service" style={{width: '50px'}} />
                                             </Col>
                                             <Col className='ml-auto mt-3'>
                                                 <button className='statusBtn'>Pending</button>

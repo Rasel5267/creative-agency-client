@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import { useContext } from 'react';
-import { Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { UserContext } from '../../../App';
-import service1 from '../../../images/icons/service2.png';
+import './Service.css';
+import ServiceCard from './ServiceCard';
 
 const Service = () => {
     const [newService, setNewService] = useState([]);
@@ -19,22 +16,7 @@ const Service = () => {
             <div className="serviceCard text-center">
                 <div className="row">
                     {
-                        newService.map(newService =>
-                            <div className="col-md-4 col-sm-12">
-                                <Card style={{height: '230px'}}>
-                                    <div className="icon mt-3">
-                                        <img style={{width: '50px',}} src={service1} alt="icon"/>
-                                    </div>
-                                    <div className="pl-2 pr-2">
-                                        <Link to='/orders'>
-                                            <h2 style={{color: '#000'}} className = "mt-2">{newService.title}</h2>
-                                        </Link>
-                                        <p>{newService.description}</p>
-                                    </div>
-                                </Card>
-                            </div>
-                        )
-                        .slice(0,6)
+                        newService.map(newService => <ServiceCard newService={newService}></ServiceCard>).slice(0,6)
                     }
                 </div>
             </div>

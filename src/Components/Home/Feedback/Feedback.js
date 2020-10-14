@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Card, Col, Row } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import './Feedback.css';
 
 const Feedback = () => {
@@ -28,7 +28,7 @@ const Feedback = () => {
                                     <Card className="card">
                                         <div className="card-title">
                                             <div className="mt-4 ml-3">
-                                                <img className="reviewImg" src={feedback.pic} alt="service" style={{width: '50px'}} />
+                                                <img className="reviewImg animation" src={feedback.pic} alt="service" style={{width: '50px'}} />
                                             </div>
                                             <div className='mt-3 ml-3'>
                                                 <h4>{feedback.name}</h4>

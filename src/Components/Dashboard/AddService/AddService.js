@@ -13,26 +13,40 @@ const AddService = () => {
         title: '',
         description: '',
     });
-
-    const handleAddService = () => {
-        const newServiceValue = {...loggedInUser,...addService};
-        fetch('http://localhost:5000/addNewService',{
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
-            body: JSON.stringify(newServiceValue)
-        })
-        .then(res => res.json())
-        .then(data =>{
-            console.log(data)
-        })
-      }
-
+    const [file , setFile] = useState(null);
 
     const handleService = e => {
         const newServiceInfo = {...addService};
         newServiceInfo[e.target.name] = e.target.value;
         setAddService(newServiceInfo);
     }
+
+    const handleFileChange = (e) => {
+        const newFile = e.target.files[0];
+        setFile(newFile);
+    }
+
+    const handleAddService = () => {
+
+        const formData = new FormData()
+        formData.append('file', file);
+        formData.append('title', addService.title);
+        formData.append('description', addService.description);
+
+        fetch('http://localhost:5000/addNewService',{
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+      }
+
+
     return (
         <div className="addService">
             <div className="row">
@@ -59,7 +73,7 @@ const AddService = () => {
                                     <Col>
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Icon</Form.Label>
-                                            <Form.Control type="file" placeholder="Upload Project File" />
+                                            <Form.Control onChange={handleFileChange}type="file" placeholder="Upload Project File" />
                                         </Form.Group>
                                     </Col>
                                 </Row>

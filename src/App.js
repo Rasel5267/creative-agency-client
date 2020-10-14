@@ -16,9 +16,9 @@ import MakeAdmin from './Components/Dashboard/MakeAdmin/MakeAdmin';
 export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({});
+  const [loggedInUser, serviceInfo, setServiceInfo, setLoggedInUser] = useState({});
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+    <UserContext.Provider value={[loggedInUser, serviceInfo, setServiceInfo, setLoggedInUser]}>
       <Router>
         <Switch>
           <Route exact path="/">
