@@ -13,7 +13,7 @@ const ServiceList = () => {
     const [project, setProject] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/project?email='+loggedInUser.email,{
+        fetch('https://hidden-retreat-77167.herokuapp.com/project?email='+loggedInUser.email,{
             method: 'GET',
             headers: { 
                 'authorization': `Bearer ${sessionStorage.getItem('token')}`,

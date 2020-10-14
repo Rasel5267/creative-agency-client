@@ -18,7 +18,7 @@ const Review = () => {
 
     const handleReview = () => {
         const newReviewValue = {...loggedInUser, ...newReview};
-        fetch('http://localhost:5000/addReview',{
+        fetch('https://hidden-retreat-77167.herokuapp.com/addReview',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(newReviewValue)

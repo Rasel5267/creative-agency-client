@@ -18,7 +18,7 @@ const Orders = () => {
 
     const handleChangeUserValue = () => {
         const newAddedUserValue = {...loggedInUser, ...userValue};
-        fetch('http://localhost:5000/addProject',{
+        fetch('https://hidden-retreat-77167.herokuapp.com/addProject',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(newAddedUserValue)

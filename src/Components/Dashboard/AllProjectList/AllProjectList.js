@@ -12,7 +12,7 @@ const AllProjectList = () => {
     const [allProjectList, setAllProjectList] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allProject')
+        fetch('https://hidden-retreat-77167.herokuapp.com/allProject')
         .then(res => res.json())
         .then(data => setAllProjectList(data))
     },[])

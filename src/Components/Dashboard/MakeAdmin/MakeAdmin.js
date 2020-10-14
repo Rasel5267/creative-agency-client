@@ -12,7 +12,7 @@ const MakeAdmin = () => {
 
     const handleNewAdmin = () => {
         const newAdminValue = {...newAdmin};
-        fetch('http://localhost:5000/addAAdmin',{
+        fetch('https://hidden-retreat-77167.herokuapp.com/addAAdmin',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(newAdminValue)

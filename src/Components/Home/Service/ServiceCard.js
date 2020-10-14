@@ -11,7 +11,7 @@ const ServiceCard = ({newService}) => {
                    {
                         newService.image ? <img className="animation" style={{width: '50px',}} src={`data:image/png;base64,${newService.image.img}`} alt="icon"/>
                         :
-                        <img className="animation" style={{width: '50px',}} src={`http://localhost:5000/${newService.img}`} alt="icon"/>
+                        <img className="animation" style={{width: '50px',}} src={`https://hidden-retreat-77167.herokuapp.com/${newService.img}`} alt="icon"/>
                    }
                 </div>
                 <div className="pl-2 pr-2">
