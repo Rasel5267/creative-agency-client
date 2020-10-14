@@ -1,0 +1,9 @@
+.addService {
+  width: 90%;
+  margin: 30px auto;
+}
+.addService-card {
+  background: #fff;
+  padding: 10px 10px;
+  border-radius: 10px;
+}

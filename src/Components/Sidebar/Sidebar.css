@@ -1,0 +1,10 @@
+.active {
+  color: green !important;
+}
+.title {
+  display: flex;
+  margin-top: 10px;
+}
+.placeOrder {
+  background: #f4f7fc;
+}
