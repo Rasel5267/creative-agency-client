@@ -16,7 +16,7 @@ const Service = () => {
             <div className="serviceCard text-center">
                 <div className="row">
                     {
-                        newService.map(newService => <ServiceCard newService={newService}></ServiceCard>).slice(0,6)
+                        newService.map(newService => <ServiceCard newService={newService}></ServiceCard>).slice(0,9)
                     }
                 </div>
             </div>

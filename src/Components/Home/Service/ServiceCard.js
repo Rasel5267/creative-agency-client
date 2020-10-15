@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ServiceCard = ({newService}) => {
     return (
         <div className="col-md-4 col-sm-12">
-            <Card style={{height: '230px'}}>
+            <Card className="card" style={{height: '230px'}}>
                 <div className="icon mt-3">
                    {
                         newService.image ? <img className="animation" style={{width: '50px',}} src={`data:image/png;base64,${newService.image.img}`} alt="icon"/>

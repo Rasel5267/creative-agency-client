@@ -41,7 +41,7 @@ const Feedback = () => {
                                     </Card>
                                 </div>
                             )
-                            .slice(0,6)
+                            .slice(0,9)
                         }
                     </div>
                 </div>
