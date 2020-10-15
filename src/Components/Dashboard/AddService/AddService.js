@@ -73,7 +73,7 @@ const AddService = () => {
                                     <Col>
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Icon</Form.Label>
-                                            <Form.Control onChange={handleFileChange}type="file" placeholder="Upload Project File" />
+                                            <Form.Control onChange={handleFileChange} type="file" placeholder="Upload Project File" />
                                         </Form.Group>
                                     </Col>
                                 </Row>

@@ -9,23 +9,30 @@ import Sidebar from '../../Sidebar/Sidebar';
 
 const Orders = () => {
     const [loggedInUser] = useContext(UserContext);
-    console.log(loggedInUser);
     const [userValue, setUserValue] = useState({
         title: '',
         projectDtl: '',
         price: ''
     });
+    const [userPhoto , setUserPhoto] = useState(null);
 
     const handleChangeUserValue = () => {
-        const newAddedUserValue = {...loggedInUser, ...userValue};
+        const formData = new FormData()
+        formData.append('file', userPhoto);
+        formData.append('title', userValue.title);
+        formData.append('projectDtl', userValue.projectDtl);
+        formData.append('name', loggedInUser.name);
+        formData.append('email', loggedInUser.email);
         fetch('https://hidden-retreat-77167.herokuapp.com/addProject',{
             method: 'POST',
-            headers: { 'Content-Type': 'application/json'},
-            body: JSON.stringify(newAddedUserValue)
+            body: formData
         })
         .then(res => res.json())
-        .then(data =>{
+        .then(data => {
             console.log(data)
+        })
+        .catch(err => {
+            console.log(err)
         })
       }
 
@@ -33,6 +40,10 @@ const Orders = () => {
         const newUserValue = {...userValue};
         newUserValue[e.target.name] = e.target.value;
         setUserValue(newUserValue);
+    }
+    const handleFile = (e) => {
+        const newFile = e.target.files[0];
+        setUserPhoto(newFile);
     }
     return (
         <div className="orders">
@@ -65,7 +76,7 @@ const Orders = () => {
                                 </Col>
                                 <Col>
                                     <Form.Group controlId="formBasicPassword">
-                                        <Form.Control type="file" placeholder="Upload Project File" />
+                                        <Form.Control onChange={handleFile} type="file" placeholder="Upload Project File" />
                                     </Form.Group>
                                 </Col>
                             </Row>
