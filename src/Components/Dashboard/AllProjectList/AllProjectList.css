@@ -2,3 +2,8 @@
   width: 90%;
   margin: 30px auto;
 }
+.updateBtn {
+  border: 1px solid gray;
+  background: #fff;
+  border-radius: 3px;
+}
