@@ -7,19 +7,12 @@
 ## Project Details
 
 - Users can buy Default Services or Order a Custom One.
-
-- Users can review and Services and it also show in review section
-
+- Users can review and Services and it also shows in the review section
 - Users can see the Services and Order they ordered.
-
 - Users and Admin different dashboard
-
 - Admin can create new Services, See all the pending orders.
-
 - New Services also show in Services Section.
-
 - Update status by admin panel.
-
 - Admin can delete existing Services and Orders.
 
 ### Technology :
