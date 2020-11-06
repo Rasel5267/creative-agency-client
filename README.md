@@ -6,14 +6,10 @@
 
 ## Project Details
 
-- Users can buy Default Services or Order a Custom One.
-- Users can review and Services and it also shows in the review section
-- Users can see the Services and Order they ordered.
-- Users and Admin different dashboard
-- Admin can create new Services, See all the pending orders.
-- New Services also show in Services Section.
-- Update status by admin panel.
-- Admin can delete existing Services and Orders.
+- Developed a selling website for the customer order processing unit.
+- Create a user management system that includes google login, logout, order services, order list by a specific user, and review services.
+- Designed and developed an admin panel for admin and users individually.
+
 
 ### Technology :
 
